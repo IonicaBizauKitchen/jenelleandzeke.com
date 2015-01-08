@@ -1,9 +1,15 @@
-mainColor = #00b223
-backgroundColor = white
+// backgroundColor = #62700B
+backgroundColor = #A0A880
+// backgroundColor = #E4E5D8
 headingColor = black
 textColor = #333
-columnWidth = 580px
+columnWidth = 600px
 imageWidth = 600px
+
+@font-face
+  font-family springtime
+  font-style normal
+  src url(/assets/fonts/springtime.ttf)
 
 *
   -moz-box-sizing border-box
@@ -17,16 +23,24 @@ html, body
 body
   font-family "PT Serif", helvetica, arial
   color textColor
-  background backgroundColor url("assets/images/dust.jpg")
+  background backgroundColor url("/assets/images/gingko-tile.png")
   padding 0
   margin 0
   position relative
 
 #content
-  margin 0 auto
+  background white url("/assets/images/dust.jpg")
+  margin 50px auto 100px auto
+  padding 30px
   max-width columnWidth
   position relative
-  background blue
+  box-shadow 0 0 40px rgba(black, 0.5)
+  text-align center
+  border-radius 4px
+
+#gingko
+  display inline-block
+  width 100%
 
 #nav
   text-align center
@@ -55,7 +69,33 @@ p
       background mainColor
       text-decoration none
 
-h1,h2,h3
-  font-family 'roboto slab'
+h1,h2,h3,h4
+  text-align center
+  font-family springtime
   color headingColor
   line-height 1.2
+
+h1
+  font-size 3rem
+  opacity 0.7
+
+h1 span
+  display block
+  font-size 2rem
+
+h2
+  margin-top 80px
+  letter-spacing 1rem
+
+h3
+  font-size 1rem
+  letter-spacing 1rem
+
+p
+  text-align justify
+
+#footer
+  text-align center
+
+img.gingko-leaf-pair
+  margin 100px auto 20px auto
