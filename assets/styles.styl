@@ -1,0 +1,61 @@
+mainColor = #00b223
+backgroundColor = white
+headingColor = black
+textColor = #333
+columnWidth = 580px
+imageWidth = 600px
+
+*
+  -moz-box-sizing border-box
+  -webkit-box-sizing border-box
+  box-sizing border-box
+
+html, body
+  width 100%
+  height 100%
+
+body
+  font-family "PT Serif", helvetica, arial
+  color textColor
+  background backgroundColor url("assets/images/dust.jpg")
+  padding 0
+  margin 0
+  position relative
+
+#content
+  margin 0 auto
+  max-width columnWidth
+  position relative
+  background blue
+
+#nav
+  text-align center
+  li
+    display inline-block
+    padding 0 20px
+    a
+      text-decoration none
+a
+  color textColor
+
+p
+  font-size 1rem
+  line-height 1.5
+  padding: 10px 0
+  margin: 0
+  a
+    text-decoration underline
+    color textColor
+    padding-right 3px
+    padding-left 3px
+    margin-right -3px
+    margin-left -3px
+    &:hover
+      color backgroundColor
+      background mainColor
+      text-decoration none
+
+h1,h2,h3
+  font-family 'roboto slab'
+  color headingColor
+  line-height 1.2

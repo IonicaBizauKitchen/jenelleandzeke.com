@@ -1,0 +1,26 @@
+{
+  "name": "jenelleandzeke.com",
+  "version": "1.0.0",
+  "description": "Our wedding website",
+  "scripts": {
+    "start": "harp server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zeke/jenelleandzeke.com"
+  },
+  "keywords": [
+    "wedding",
+    "harp",
+    "website"
+  ],
+  "author": "zeke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zeke/jenelleandzeke.com/issues"
+  },
+  "homepage": "https://github.com/zeke/jenelleandzeke.com",
+  "devDependencies": {
+    "harp": "^0.14.0"
+  }
+}
