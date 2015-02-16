@@ -1,11 +1,12 @@
 // backgroundColor = #62700B
 // backgroundColor = #A0A880
 // backgroundColor = #E29B6F
-backgroundColor = #CC8E6A
+// backgroundColor = #CC8E6A
+backgroundColor = #af3400
 headingColor = black
 textColor = #333
-columnWidth = 400px
-imageWidth = 400px
+columnWidth = 600px
+imageWidth = 600px
 
 @font-face
   font-family springtime
@@ -32,41 +33,75 @@ body
 #content
   background white url("/assets/images/dust.jpg")
   margin 50px auto 100px auto
-  padding 25px
+  padding 0
   max-width columnWidth
   position relative
   box-shadow 0 0 40px rgba(black, 0.5)
   text-align center
-  border-radius 4px
+  border-radius 6px
+  border 0
+
+#padded_content
+  padding 0 40px
+  background transparent url("/assets/images/jenelle-and-zeke.png") no-repeat bottom center
 
 #gingko
   display inline-block
   width 100%
+  border-radius 6px
 
-#nav
+.nav-link
+  cursor pointer
+  font-family springtime
+  display inline-block
+  padding 8px 10px
+  border-radius 2px
+  text-decoration none
+  line-height 1
+  font-size 1.3rem
+  border 1px solid rgba(black, 0.4)
+  transition all 0.2s
+  background none
+  &:hover
+    background-color mix(backgroundColor, white, 60%)
+    color white
+    border-color mix(backgroundColor, white, 90%)
+  &:first-child
+    margin-left 0
+  &:last-child
+    margin-right 0
+
+ul#nav
+  margin 50px 0 0 0
+  padding 0
+  list-style none
   text-align center
   li
+    line-height 4
     display inline-block
-    padding 0 20px
-    a
-      text-decoration none
+    margin 0 10px
+  a
+    @extend .nav-link
+
 
 h1,h2,h3,h4
   text-align center
   font-family springtime
   color headingColor
-  line-height 1.2
+  line-height 1.5
 
 h1
-  font-size 2.2rem
+  font-size 2.7rem
   opacity 0.7
+  line-height 1.3
 
 h2
-  margin-top 4rem
+  padding-top 4rem
   letter-spacing 1rem
 
 h2.date
-  margin-top 3rem
+  margin-top 2rem 0
+  padding 0
   font-size 1rem
   letter-spacing 0.8rem
 
@@ -77,15 +112,48 @@ p
   margin 0
   text-align justify
 
+  a
+    color backgroundColor
+    text-decoration underline
+
 h3.kisses
   letter-spacing 1.2rem
   font-size 1rem
+  padding-bottom 30px
+  padding-top 500px
 
 a
   color textColor
 
-#footer
+form.rsvp
   text-align center
 
+  label
+    display block
+    clear both
+    line-height 2
+
+  input
+    display inline-block
+    // font-family "PT Serif", helvetica, arial
+    font-family springtime
+    font-size 1.3rem
+    padding 4px
+  .boolean
+    margin 20px 0
+    label
+      display inline-block
+      padding-right 20px
+      &:last-child
+        padding-right 0
+
+  #rsvp-guests
+    width 40px
+
+  input[type=submit]
+    @extend .nav-link
+    margin-top 20px
+    display inline-block
+
 img.gingko-leaf-pair
-  margin 100px auto 20px auto
+  margin 500px auto 20px auto

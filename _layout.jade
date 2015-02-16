@@ -7,12 +7,14 @@ html
   link(href='//fonts.googleapis.com/css?family=PT+Serif:400,700', rel='stylesheet', type='text/css')
   link(href='/assets/styles.css', rel='stylesheet', type='text/css')
 
-  script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js")
+  script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+  script(src="//cdnjs.cloudflare.com/ajax/libs/store.js/1.3.14/store.min.js")
   script(src="/assets/app.js")
 
   body
     #content
-      != yield
-
-      #footer
-        
+      
+      img#gingko(src="/assets/images/gingko.png")
+      
+      #padded_content
+        != yield

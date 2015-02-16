@@ -1,48 +1,35 @@
-"use strict";
+$(function(){
 
-var on = document.addEventListener
+  var url = "https://jenelleandzeke.firebaseio.com/attendees.json"
 
-on('keyup', function(event){
-  // console.log(event)
-  if (~[219, 221].indexOf(event.keyCode)) {
-    document.body.classList.toggle("disabled")
-  }
-})
+  $("form.rsvp").submit(function(e){
 
-on('DOMContentLoaded', function(){
+    var response = {};
+    $.each($('form.rsvp').serializeArray(), function(i, field) {
+      response[field.name] = field.value;
+      if (field.value) {
+        store.set(field.name, field.value);
+      }
+    });
 
-  // document.querySelector("#toc").addEventListener('click', function(event){
-  //   // event.preventDefault()
-  //   event.stopPropagation()
-  // })
+    if (!response.name) {
+      alert("Please provide your name")
+      return false;
+    }
 
-  document.querySelector("#toggle").addEventListener('click', function(event){
-    document.body.classList.toggle("disabled")
-    event.preventDefault()
-    event.stopPropagation()
+    console.log(response)
+
+    $.ajax({
+      type: "POST",
+      url: url,
+      data: JSON.stringify(response),
+      success: function(s) {
+        console.log("s", s)
+      }
+    });
+
+    return false;
   })
 
-  on('click', function(event){
-    document.body.classList.remove("disabled")
-  })
 
 })
-
-// $(function() {
-//   $('a[href*=#]:not([href=#])').click(function() {
-//     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-//       var target = $(this.hash);
-//       // location.hash = $(this.hash).selector.slice(1)
-//       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-//       if (target.length) {
-//         $('html,body').animate({
-//           scrollTop: target.offset().top
-//         }, 500, 'swing', function(e) {
-//           console.log($(this));
-//         });
-//
-//         return false;
-//       }
-//     }
-//   });
-// });

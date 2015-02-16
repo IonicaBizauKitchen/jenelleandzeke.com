@@ -1,46 +1,63 @@
-img#gingko(src="/assets/images/gingko.png")
-  
 h1 Jenelle and Zeke are getting married
 
 h2.date June 27, 2015
 
-h2 Location
+ul#nav
+  li
+    a(href="#location") Location
+  li
+    a(href="#schedule") Schedule
+  li
+    a(href="#registry") Registry
+  li
+    a(href="#accommodations") Accommodations
+  li
+    a(href="#rsvp") RSVP
+
+h2#location Location
 
 :markdown
   Chocolate caramels candy fruitcake tootsie roll. Muffin chocolate gummies biscuit pudding croissant donut danish danish. Cake apple pie icing cookie bonbon lollipop halvah macaroon. Marshmallow cake marzipan. Icing dragée biscuit. Cookie cotton candy chupa chups muffin cookie sweet muffin jelly beans. Applicake ice cream jelly-o carrot cake. Jelly-o biscuit sweet roll dessert cheesecake oat cake bonbon topping chocolate cake. Ice cream gummies tart lemon drops biscuit.
 
-h2 Schedule
+h2#schedule Schedule
 
 :markdown
   Muffin chocolate gummies biscuit pudding croissant donut danish danish. Cake apple pie icing cookie bonbon lollipop halvah macaroon. Marshmallow cake marzipan. Icing dragée biscuit. Cookie cotton candy chupa chups muffin cookie sweet muffin jelly beans. Applicake ice cream jelly-o carrot cake. Jelly-o biscuit sweet roll dessert cheesecake oat cake bonbon topping chocolate cake. Ice cream gummies tart lemon drops biscuit.
 
-h2 Registry
-
-:markdown
-  Cake apple pie icing cookie bonbon lollipop halvah macaroon. Marshmallow cake marzipan. Icing dragée biscuit. Cookie cotton candy chupa chups muffin cookie sweet muffin jelly beans. Applicake ice cream jelly-o carrot cake. Jelly-o biscuit sweet roll dessert cheesecake oat cake bonbon topping chocolate cake. Ice cream gummies tart lemon drops biscuit.
-
-h2 Attire
-
-:markdown
-  Cake apple pie icing cookie bonbon lollipop halvah macaroon. Marshmallow cake marzipan. Icing dragée biscuit. Cookie cotton candy chupa chups muffin cookie sweet muffin jelly beans. Applicake ice cream jelly-o carrot cake. Jelly-o biscuit sweet roll dessert cheesecake oat cake bonbon topping chocolate cake. Ice cream gummies tart lemon drops biscuit.
+h2#accommodations Accommodations
   
-h2 RSVP
-
 :markdown
   Cake apple pie icing cookie bonbon lollipop halvah macaroon. Marshmallow cake marzipan. Icing dragée biscuit. Cookie cotton candy chupa chups muffin cookie sweet muffin jelly beans. Applicake ice cream jelly-o carrot cake. Jelly-o biscuit sweet roll dessert cheesecake oat cake bonbon topping chocolate cake. Ice cream gummies tart lemon drops biscuit.
+    
+h2#registry Registry and Honeymoon Fund
 
-img.gingko-leaf-pair(src="/assets/images/gingko-leaf-pair.png")
+:markdown
+  Instead of a traditional gift registry, we've set up a fund to raise money to cover costs of the wedding and honeymoon.
+  To donate to the honeymoon fund, visit [zola.com/registry/jenelleandzeke](https://www.zola.com/registry/jenelleandzeke)
+
+h2#rsvp RSVP
+
+form.rsvp
+  
+  label(for="rsvp-name") Your name
+  input#rsvp-name(name="name")
+
+  .boolean
+    
+    label(for="rsvp-attending-yes")
+      input#rsvp-attending-yes(type="radio" name="attending" value="yes" checked="checked")
+      span Attending
+      
+    label(for="rsvp-attending-no")
+      input#rsvp-attending-no(type="radio" name="attending" value="no")
+      span Not Attending
+
+  label(for="rsvp-guests") Guests
+  input#rsvp-guests(name="guests" value="1")
+
+  div(style="text-align:center;")
+    input(type="submit" value="Send")
+
+//- img.gingko-leaf-pair(src="/assets/images/gingko-leaf-pair.png")
   
 h3.kisses XOXOXOXOX
-
-//- ul#nav
-//-   li
-//-     a(href="#location") Location
-//-   li
-//-     a(href="#schedule") Schedule
-//-   li
-//-     a(href="#registry") Registry
-//-   li
-//-     a(href="#attire") Attire
-//-   li
-//-     a(href="#rsvp") RSVP
