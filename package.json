@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Our wedding website",
   "scripts": {
-    "start": "harp server"
+    "start": "harp server -p $PORT",
+    "dev": "harp server"
   },
   "repository": {
     "type": "git",
