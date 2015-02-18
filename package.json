@@ -21,7 +21,7 @@
     "url": "https://github.com/zeke/jenelleandzeke.com/issues"
   },
   "homepage": "https://github.com/zeke/jenelleandzeke.com",
-  "devDependencies": {
-    "harp": "^0.14.0"
+  "dependencies": {
+    "harp": "^0.15.2"
   }
 }
