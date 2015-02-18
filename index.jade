@@ -8,41 +8,64 @@ ul#nav
   li
     a(href="#schedule") Schedule
   li
-    a(href="#registry") Registry
+    a(href="#travel") Travel
   li
     a(href="#accommodations") Accommodations
+  li
+    a(href="#registry") Registry
   li
     a(href="#rsvp") RSVP
 
 h2#location Location
 
 :markdown
-  Chocolate caramels candy fruitcake tootsie roll. Muffin chocolate gummies biscuit pudding croissant donut danish danish. Cake apple pie icing cookie bonbon lollipop halvah macaroon. Marshmallow cake marzipan. Icing dragée biscuit. Cookie cotton candy chupa chups muffin cookie sweet muffin jelly beans. Applicake ice cream jelly-o carrot cake. Jelly-o biscuit sweet roll dessert cheesecake oat cake bonbon topping chocolate cake. Ice cream gummies tart lemon drops biscuit.
+  We haven't picked out a venue yet, but our target area is within an hour's drive from San Francisco or the East Bay, so plan on staying in San Francisco, Oakland, Berkeley, or somewhere nearby. Once we've got a venue in mind, we'll let you all know by email, and we'll update the website with more details.
 
 h2#schedule Schedule
 
 :markdown
-  Muffin chocolate gummies biscuit pudding croissant donut danish danish. Cake apple pie icing cookie bonbon lollipop halvah macaroon. Marshmallow cake marzipan. Icing dragée biscuit. Cookie cotton candy chupa chups muffin cookie sweet muffin jelly beans. Applicake ice cream jelly-o carrot cake. Jelly-o biscuit sweet roll dessert cheesecake oat cake bonbon topping chocolate cake. Ice cream gummies tart lemon drops biscuit.
+  We don't have this figured out yet either, but we will.
+
+h2#travel Travel
+  
+:markdown
+  If you're flying in, you'll want to land in either **OAK** or **SFO** airport. To search for cheap flights, try [google.com/flights](https://www.google.com/flights/#search;f=ABQ;t=SFO,OAK;d=2015-06-26;r=2015-06-29), which finds fares for most popular airlines. Give [southwest.com](https://www.southwest.com/) a try too, as their flights are not listed by any other service.
+
+  If you're coming by train, take the [California Zephyr](http://www.amtrak.com/california-zephyr-train) or the [Coast Starlight](http://www.amtrak.com/coast-starlight-train) to Emeryville or Jack London Square in Oakland.
+  
+  If you're driving, you're driving.
+
 
 h2#accommodations Accommodations
   
 :markdown
-  Cake apple pie icing cookie bonbon lollipop halvah macaroon. Marshmallow cake marzipan. Icing dragée biscuit. Cookie cotton candy chupa chups muffin cookie sweet muffin jelly beans. Applicake ice cream jelly-o carrot cake. Jelly-o biscuit sweet roll dessert cheesecake oat cake bonbon topping chocolate cake. Ice cream gummies tart lemon drops biscuit.
+
+  [AirBNB](https://www.airbnb.com/s/San-Francisco--CA?checkin=06%2F26%2F2015&checkout=06%2F29%2F2015&guests=2&source=bb&ss_id=ctgrwb3d) is your best option for finding an affordable and interesting place in the city.
+  
+  If you're planning to camp, check out the [Rob Hill Campground](http://www.presidio.gov/explore/Pages/rob-hill-campground.aspx) in San Francisco's Presidio district. There are also a handful of beautiful campsites within minutes of Oakland and Berkeley, namely the [Chabot Regional Park](http://www.ebparks.org/parks/anthony_chabot). More info at [ebparks.org](http://www.ebparks.org/activities/camping)
     
-h2#registry Registry and Honeymoon Fund
+h2#registry Honeymoon Fund
 
 :markdown
-  Instead of a traditional gift registry, we've set up a fund to raise money to cover costs of the wedding and honeymoon.
-  To donate to the honeymoon fund, visit [zola.com/registry/jenelleandzeke](https://www.zola.com/registry/jenelleandzeke)
+  Instead of a traditional gift registry, we've set up a fund to raise money to offset the cost of our wedding and honeymoon.
+  To donate to our honeymoon fund, visit [zola.com/registry/jenelleandzeke](https://www.zola.com/registry/jenelleandzeke). Your 
+  donations are appreciated, but not required. <3
+  
+div.centered-container
+  a.boxed(href="https://www.zola.com/registry/jenelleandzeke") Donate
 
 h2#rsvp RSVP
 
+:markdown
+  We hope you can make the trip out to celebrate with us. Please let us know whether or not you're coming, and leave any notes.
+
 form.rsvp
   
-  label(for="rsvp-name") Your name
-  input#rsvp-name(name="name")
+  .field
+    label(for="rsvp-name") Your name
+    input#rsvp-name(name="name" required="required")
 
-  .boolean
+  .field.boolean
     
     label(for="rsvp-attending-yes")
       input#rsvp-attending-yes(type="radio" name="attending" value="yes" checked="checked")
@@ -51,13 +74,23 @@ form.rsvp
     label(for="rsvp-attending-no")
       input#rsvp-attending-no(type="radio" name="attending" value="no")
       span Not Attending
+  .field
+    label(for="rsvp-guests") Number of guests, including yourself
+    select#rsvp-guests(name="guests")
+      option(value="1") 1 solitary guest
+      option(value="2") 2 happy guests
+      option(value="3") 3 is company
+      option(value="4") 4 people fit in a sedan
+      option(value="5") 5 alive
+      option(value="6") 6 pick up sticks
+      option(value="7") 7 in a minivan
+      option(value="8") 8 you're Danielle
 
-  label(for="rsvp-guests") Guests
-  input#rsvp-guests(name="guests" value="1")
+  .field
+    label(for="rsvp-talents") Notes, ideas, questions, special talents, props you can bring...
+    textarea#rsvp-talents(name="talents")
 
-  div(style="text-align:center;")
-    input(type="submit" value="Send")
-
-//- img.gingko-leaf-pair(src="/assets/images/gingko-leaf-pair.png")
+  div.centered-container
+    input(type="submit" value="Respond")
   
 h3.kisses XOXOXOXOX
