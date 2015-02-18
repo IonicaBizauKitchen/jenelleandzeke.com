@@ -17,14 +17,15 @@ $(function(){
       return false;
     }
 
-    console.log(response)
+    console.log("response", response)
 
     $.ajax({
       type: "POST",
       url: url,
       data: JSON.stringify(response),
-      success: function(s) {
-        console.log("s", s)
+      success: function(data) {
+        console.log("API response", data)
+        $(".form-thanks").show()
       }
     });
 
