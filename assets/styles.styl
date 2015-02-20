@@ -69,7 +69,7 @@ body
 
 #padded_content
   padding 0 40px
-  background transparent url("/assets/images/jenelle-and-zeke.png") no-repeat bottom center
+  // background transparent url("/assets/images/jenelle-and-zeke.png") no-repeat bottom center
 
 #gingko
   display inline-block
@@ -128,7 +128,7 @@ h3.kisses
   letter-spacing 1.2rem
   font-size 1rem
   padding-bottom 30px
-  padding-top 500px
+  padding-top 100px
 
 a
   color textColor
@@ -143,7 +143,7 @@ a
     text-align center
 
 form.rsvp
-  text-align center
+  text-align left
 
   .field
     margin 20px 0
@@ -160,6 +160,9 @@ form.rsvp
     padding 4px
     &#rsvp-guests
       width 40px
+    &[type=text]
+      display block
+      width 100%
     &[type=submit]
       @extend .boxed-link
       margin-top 20px
@@ -176,12 +179,9 @@ form.rsvp
 
   textarea
     width 100%
-    min-height 100px
+    min-height 180px
     font-family "PT Serif", helvetica, arial
     font-size 1em
-
-img.gingko-leaf-pair
-  margin 500px auto 20px auto
 
 [class^="form-result"] p
   font-family springtime
