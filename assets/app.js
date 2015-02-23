@@ -52,7 +52,9 @@ $(function(){
       success: function(data) {
         if (rsvp.attending === "yes") {
           $(".form-result-happy").slideDown()
+          $(".form-result-sad").hide()
         } else {
+          $(".form-result-happy").hide()
           $(".form-result-sad").slideDown()
         }
       }
