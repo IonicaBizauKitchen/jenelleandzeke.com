@@ -7,13 +7,42 @@ $(function(){
     $.ajax({
       type: "GET",
       url: api_url,
-      success: function(responses) {
-        // $("#responses").text(JSON.stringify(data, null, 2))
-        console.table(responses)
-        // Object.keys(responses).forEach(function(key){
-        //   var response = responses[key]
-        //   $("#responses").append(JSON.stringify(response, null, 2))
-        // })
+      success: function(data) {
+
+        console.log("done")
+
+        var responses = Object.keys(data).map(function(key){
+          return data[key];
+        })
+
+        console.log(responses)
+
+        var attending = responses.filter(function(response){
+          return response.attending === "yes"
+        })
+
+        var not_attending = responses.filter(function(response){
+          return response.attending === "no"
+        })
+
+        var guest_count = 0
+        attending.forEach(function(a){
+          guest_count += Number(a.guests)
+        })
+        $("#guest_count").text(guest_count)
+
+        attending.forEach(function(response){
+          $("#attending").append(
+            "<p><b>" + response.name + " (" + response.guests + ")</b> " + response.talents + " </p>"
+          )
+        })
+
+        not_attending.forEach(function(response){
+          $("#not_attending").append(
+            "<p><b>" + response.name + " (" + response.guests + ")</b> " + response.talents + " </p>"
+          )
+        })
+
       }
     })
   }
