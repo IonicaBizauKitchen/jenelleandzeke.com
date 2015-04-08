@@ -106,8 +106,7 @@ form.rsvp
     label(for="rsvp-name") Your name
     input#rsvp-name(name="name" required="required" type="text")
 
-  .field.boolean
-    
+  .field.boolean    
     label(for="rsvp-attending-yes")
       input#rsvp-attending-yes(type="radio" name="attending" value="yes" checked="checked")
       span Attending
@@ -115,20 +114,21 @@ form.rsvp
     label(for="rsvp-attending-no")
       input#rsvp-attending-no(type="radio" name="attending" value="no")
       span Not Attending
-  .field
-    label(for="rsvp-guests") Number of guests, including yourself
-    select#rsvp-guests(name="guests")
-      option(value="1") 1 solitary guest
-      option(value="2") 2 happy guests
-      option(value="3") 3 is company
-      option(value="4") 4 people fit in a sedan
-      option(value="5") 5 alive
-      option(value="6") 6 pick up sticks
-      option(value="7") 7 in a minivan
-      option(value="8") 8 you're Danielle
+
+  //- .field
+  //-   label(for="rsvp-guests") Number of guests, including yourself
+  //-   select#rsvp-guests(name="guests")
+  //-     option(value="1") 1 solitary guest
+  //-     option(value="2") 2 happy guests
+  //-     option(value="3") 3 is company
+  //-     option(value="4") 4 people fit in a sedan
+  //-     option(value="5") 5 alive
+  //-     option(value="6") 6 pick up sticks
+  //-     option(value="7") 7 in a minivan
+  //-     option(value="8") 8 you're Danielle
 
   .field
-    label(for="rsvp-talents") Names of your guests; party ideas; special talents...
+    label(for="rsvp-talents") Name(s); party ideas; special talents...
     textarea#rsvp-talents(name="talents")
 
   div.centered-container
